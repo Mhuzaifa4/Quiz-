@@ -1,0 +1,28 @@
+Question 2: 2. Write a program to print all Armstrong numbers under 1000.
+Example:
+Input: 153
+153 = 1*1*1 + 5*5*5 + 3*3*3
+Output: 153 is an Armstrong number
+
+void main() {
+  print('Armstrong numbers under 1000:');
+  
+  for (int number = 1; number < 1000; number++) {
+    if (isArmstrong(number)) {
+      print(number);
+    }
+  }
+}
+
+bool isArmstrong(int number) {
+  int sum = 0;
+  int temp = number;
+  
+  while (temp > 0) {
+    int digit = temp % 10;
+    sum += digit * digit * digit;
+    temp ~/= 10;
+  }
+  
+  return sum == number;
+}

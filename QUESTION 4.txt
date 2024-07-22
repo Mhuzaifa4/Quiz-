@@ -1,0 +1,18 @@
+Question 4: Write a program to display a pattern like a right angle triangle using an
+Asterisk using loop.
+The pattern like:
+ ****
+ ***
+ **
+ *
+
+void main() {
+  int rows = 4; // Number of rows for the triangle
+  
+  for (int i = rows; i > 0; i--) {
+    for (int j = 0; j < i; j++) {
+      stdout.write('*');
+    }
+    print('');
+  }
+}
